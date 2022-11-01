@@ -1,0 +1,61 @@
+/* ------------------------------- SMALL DEVICE TYPOGRAPHY ------------------------------- */
+@mixin small-page-header() {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@mixin small-section-header() {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin small-sub-header() {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+
+@mixin small-body-copy() {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+@mixin small-labels-buttons() {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+/* ------------------------------- LARGE DEVICE TYPOGRAPHY ------------------------------- */
+@mixin large-page-header() {
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin large-section-header() {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+@mixin large-sub-header() {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+
+@mixin large-body-copy() {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+@mixin large-labels-buttons() {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
