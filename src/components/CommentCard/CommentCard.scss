@@ -1,0 +1,74 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as bp;
+@use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.user {
+  &__icon {
+    flex-shrink: 0;
+  }
+
+  &__card {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid $secondary-semi-dark;
+    margin: 1rem 0;
+  }
+
+  &__info {
+    width: 80%;
+    @include bp.medium {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: $secondary-semi-dark;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name,
+  &__date {
+    margin-top: 0.5rem;
+  }
+
+  &__name {
+    color: $primary-dark;
+    font-weight: 600;
+  }
+
+  &__date {
+    color: $primary-semi-dark;
+  }
+
+  &__comment {
+    margin-top: 0;
+    color: $secondary-dark;
+    max-width: 87%;
+  }
+  &-comment {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__counter {
+    margin: 0.3125rem 0 0 0;
+  }
+}
