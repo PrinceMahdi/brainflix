@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 /* CSS resets */
 html,
 body {
@@ -23,4 +25,5 @@ li {
 
 ::placeholder {
   font-family: "Avenir";
+  color: $primary-dark;
 }
