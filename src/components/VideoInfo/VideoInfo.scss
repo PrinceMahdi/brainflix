@@ -1,0 +1,136 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as bp;
+@use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.video {
+  &__info {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+    @include bp.medium {
+      padding: 0 3rem;
+    }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+    @include bp.large {
+      padding: 0 5rem;
+    }
+
+    &-title {
+      margin-top: 0;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
+      @include tp.small-page-header;
+      color: $primary-dark;
+
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        @include tp.large-page-header;
+        margin-bottom: 0;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        @include tp.large-page-header;
+        margin-bottom: 0;
+      }
+    }
+
+    &__view {
+      &-container {
+        @include mx.flexbox;
+        gap: 0.5rem;
+      }
+      &-icon {
+        width: 1.6rem;
+        height: 1.1rem;
+        color: $primary-semi-dark;
+        background-image: url("../../assets/images/views.svg");
+        background-size: cover;
+      }
+      &-counter {
+        color: $primary-semi-dark;
+      }
+    }
+
+    &__like {
+      &-container {
+        @include mx.flexbox(flex-start);
+        gap: 0.5rem;
+        line-height: 0;
+      }
+      &-icon {
+        width: 1.2rem;
+        height: 1.1rem;
+        color: $secondary-semi-dark;
+        background-image: url("../../assets/images/likes.svg");
+        background-size: cover;
+      }
+      &-counter {
+        color: $primary-semi-dark;
+      }
+    }
+
+    &-container {
+      @include mx.flexbox(space-between, stretch);
+      @include tp.small-body-copy;
+      border-top: 1px solid $secondary-semi-dark;
+      border-bottom: 1px solid $secondary-semi-dark;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        border-top: none;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        border-top: none;
+      }
+    }
+
+    &--left {
+      line-height: 1.5;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        display: flex;
+        gap: 2rem;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+
+    &--right {
+      padding-right: 3rem;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        display: flex;
+        gap: 2rem;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+
+    &-date {
+      color: $primary-semi-dark;
+    }
+
+    &-description {
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
+      @include bp.small {
+        @include tp.small-body-copy;
+      }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        @include tp.large-body-copy;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        @include tp.large-body-copy;
+      }
+    }
+  }
+}
