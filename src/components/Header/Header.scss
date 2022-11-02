@@ -119,6 +119,7 @@
       @include mx.button;
       width: 100%;
       font-weight: 600;
+      transition: 0.3s ease;
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         padding: 0.75rem 3rem;
@@ -139,7 +140,7 @@
     height: 2.8rem;
     border-radius: 50%;
     background-size: cover;
-    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+    /* --------------- STYLING FOR MEDIUM DEVICES --------------- */
     @include bp.medium {
       display: none;
     }

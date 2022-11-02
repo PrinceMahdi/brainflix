@@ -1,0 +1,10 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+
+.video {
+  width: 100vw;
+  margin-bottom: 1rem;
+  aspect-ratio: 16/9;
+  max-height: 35rem;
+  background-color: $secondary-dark;
+}
