@@ -18,6 +18,7 @@
 
   &__info {
     width: 80%;
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       width: 100%;
     }
