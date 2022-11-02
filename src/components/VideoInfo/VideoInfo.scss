@@ -76,11 +76,11 @@
       @include tp.small-body-copy;
       border-top: 1px solid $secondary-semi-dark;
       border-bottom: 1px solid $secondary-semi-dark;
-      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      /* ----------------- STYLING FOR MEDIUM DEVICES ----------------- */
       @include bp.medium {
         border-top: none;
       }
-      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      /* ----------------- STYLING FOR LARGE DEVICES ----------------- */
       @include bp.large {
         border-top: none;
       }
