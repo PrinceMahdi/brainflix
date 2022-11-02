@@ -30,6 +30,7 @@
 
 @mixin buttonHover {
   background-color: $secondary-semi-light;
+  border: 1px solid $secondary-semi-dark;
 }
 /* ------------- MIXIN FOR FLEXBOX ------------- */
 @mixin flexbox($justify-content: center, $align-items: center) {

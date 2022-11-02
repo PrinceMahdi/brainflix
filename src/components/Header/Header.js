@@ -24,6 +24,11 @@ const Header = () => {
           <div className="header__upload-container">
             <div className="header__upload-icon"></div>
             <button className="header__upload-button">UPLOAD</button>
+            <img
+              className="header__avatar-medium"
+              src={avatar}
+              alt="Moham Muruge Avatar"
+            ></img>
           </div>
         </div>
       </header>
