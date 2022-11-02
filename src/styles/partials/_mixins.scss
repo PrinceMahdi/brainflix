@@ -1,0 +1,40 @@
+/* ------------- PARTIAL IMPORTS ------------- */
+@use "./colors" as *;
+
+/* ------------- MIXIN FOR BUTTON STYLING ------------- */
+@mixin logo {
+  max-height: 1.5625rem;
+  max-width: 7.5rem;
+}
+
+/* ------------- MIXIN FOR BUTTON STYLING ------------- */
+@mixin button {
+  color: $primary-light;
+  background-color: $primary-semi-light;
+  border: 1px solid $primary-semi-light;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+
+@mixin buttonLarge {
+  color: $primary-light;
+  background-color: $primary-semi-light;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+@mixin buttonHover {
+  background-color: $secondary-semi-light;
+  border: 1px solid $secondary-semi-dark;
+}
+/* ------------- MIXIN FOR FLEXBOX ------------- */
+@mixin flexbox($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

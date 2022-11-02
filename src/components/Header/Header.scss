@@ -1,3 +1,151 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/breakpoints" as bp;
 @use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.header {
+  padding: 1rem 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+  @include bp.medium {
+    @include mx.flexbox;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  }
+  /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+  @include bp.large {
+    @include mx.flexbox;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+  }
+
+  &__info {
+    &-container {
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        @include mx.flexbox;
+        gap: 5%;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        @include mx.flexbox;
+        gap: 5%;
+      }
+    }
+  }
+
+  &__avatar {
+    &-medium {
+      @include bp.small {
+        display: none;
+      }
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
+
+  &__logo {
+    &-container {
+      @include mx.flexbox;
+    }
+  }
+
+  &__search {
+    &-icon {
+      background-image: url("../../assets/images/search.svg");
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      background-size: cover;
+      left: 0.625rem;
+    }
+
+    &-container {
+      @include mx.flexbox;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      max-width: 18rem;
+      margin: 0 auto;
+      position: relative;
+    }
+    &-box {
+      padding: 0.7rem 2.6rem;
+      width: 14.5rem;
+      background-color: $secondary-light;
+      border: 1px solid $secondary-semi-dark;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__upload {
+    &-container {
+      position: relative;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        gap: 5%;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        gap: 5%;
+      }
+    }
+    &-icon {
+      background-image: url("../../assets/images/upload.svg");
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      background-size: cover;
+      left: 0.625rem;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        left: 0.3125rem;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        left: 0.3125rem;
+      }
+    }
+
+    &-container {
+      @include mx.flexbox;
+      max-width: 18rem;
+      margin: 0 auto;
+    }
+    &-button {
+      @include mx.button;
+      width: 100%;
+      font-weight: 600;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        padding: 0.75rem 3rem;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        padding: 0.75rem 3rem;
+      }
+
+      &:hover {
+        @include mx.buttonHover;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-size: cover;
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+    @include bp.medium {
+      display: none;
+    }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+    @include bp.large {
+      display: none;
+    }
+  }
+}
