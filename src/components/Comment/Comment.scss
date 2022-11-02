@@ -1,0 +1,116 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as bp;
+@use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.comment {
+  padding: 0 1rem;
+  @include bp.medium {
+    padding: 0 3rem;
+  }
+  @include bp.large {
+    padding: 0 3rem;
+  }
+
+  &__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  &__form {
+    @include bp.medium {
+      @include mx.flexbox(center, flex-end);
+    }
+    &-container {
+      display: flex;
+      gap: 3%;
+      border-bottom: 1px solid $secondary-semi-dark;
+      padding-bottom: 1.5rem;
+      @include bp.medium {
+        @include mx.flexbox;
+        justify-content: stretch;
+        margin-bottom: 1.5rem;
+      }
+    }
+    &-icon {
+      background-image: url("../../assets/images/Mohan-muruge.jpg");
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-size: cover;
+      margin-top: 1.5rem;
+      flex-shrink: 0;
+      @include bp.medium {
+        margin-top: 1.375rem;
+      }
+    }
+    &__label {
+      color: $primary-semi-dark;
+      @include bp.small {
+        @include tp.small-sub-header;
+        font-weight: 600;
+      }
+      @include bp.medium {
+        display: none;
+      }
+      &--large {
+        @include bp.small {
+          display: none;
+        }
+        @include tp.large-body-copy;
+        color: $primary-semi-dark;
+        &-container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &__input {
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      border: 1px solid $secondary-semi-dark;
+      background-color: $secondary-light;
+      width: 100%;
+      resize: none;
+      padding: 0.75rem 3rem 0.75rem 1rem;
+      margin-top: 0.3rem;
+      &--large {
+        @include bp.small {
+          display: none;
+        }
+        resize: none;
+        padding: 0.65rem 0.5rem 0.7rem;
+        border: 1px solid $secondary-semi-dark;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+      }
+      @include bp.medium {
+        display: none;
+      }
+    }
+
+    &-button {
+      @include bp.medium {
+        margin-bottom: 0;
+        margin-left: 1.6rem;
+      }
+      &-container {
+        position: relative;
+      }
+      @include mx.button;
+      width: 100%;
+      margin: 0.75rem 0;
+    }
+    &__button {
+      &-icon {
+        background-image: url("../../assets/images/add_comment.svg");
+        width: 1.3rem;
+        height: 1.3rem;
+        background-size: cover;
+        position: absolute;
+        top: 1.5rem;
+        left: 2.1rem;
+      }
+    }
+  }
+}
