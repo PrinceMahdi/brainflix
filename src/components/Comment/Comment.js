@@ -21,6 +21,19 @@ const Comment = () => {
               cols="20"
               rows="5"
             ></textarea>
+            <div className="comment__form__label--medium-container">
+              <label for="comment" className="comment__form__label--medium">
+                JOIN THE CONVERSATION
+              </label>
+              <textarea
+                className="comment__form__input--medium"
+                placeholder="Add a new comment"
+                name="userComment"
+                id="comment"
+                cols="50"
+                rows="5"
+              ></textarea>
+            </div>
             <div className="comment__form__label--large-container">
               <label for="comment" className="comment__form__label--large">
                 JOIN THE CONVERSATION
@@ -30,7 +43,7 @@ const Comment = () => {
                 placeholder="Add a new comment"
                 name="userComment"
                 id="comment"
-                cols="50"
+                cols="56"
                 rows="5"
               ></textarea>
             </div>

@@ -1,0 +1,48 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as bp;
+@use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.video {
+  &__container {
+    @include mx.flexbox(space-between);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    max-width: 16rem;
+    @include bp.medium {
+      margin-bottom: 1.2rem;
+    }
+  }
+  &__thumbnail {
+    background-image: url("../../assets/images/Mohan-muruge.jpg");
+    width: 6rem;
+    height: 3.5rem;
+    border-radius: 0.25rem;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+  }
+
+  &__title {
+    @include tp.small-body-copy;
+    font-size: 0.75rem;
+    color: $primary-dark;
+    font-weight: 600;
+    margin: 0;
+    @include bp.medium {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__artist {
+    font-size: 0.8125rem;
+    margin: 0;
+    color: $primary-dark;
+  }
+}

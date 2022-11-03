@@ -4,20 +4,19 @@
 @use "../../styles/partials/typography" as tp;
 @use "../../styles/partials/mixins" as mx;
 
-.main {
-  max-width: 80rem;
-  margin: 0 auto;
-  
-  @include bp.large {
-    display: flex;
-  }
-  &--left {
-    border-right: 1px solid $secondary-semi-dark;
-  }
-
-  &--right {
+.suggested {
+  &__container {
     @include bp.large {
-      padding-left: 2rem;
+      // border-left: 1px solid $secondary-semi-dark;
+    }
+    &-title {
+      color: $primary-semi-dark;
+    }
+    @include bp.small {
+      padding: 0 1rem;
+    }
+    @include bp.medium {
+      padding: 0 3rem;
     }
   }
 }
