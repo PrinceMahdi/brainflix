@@ -6,8 +6,7 @@
 
 .video {
   &__info {
-    max-width: 90rem;
-    margin: 0 auto;
+    max-width: 53rem;
     padding: 0 1rem;
     /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
@@ -15,11 +14,12 @@
     }
     /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
-      padding: 0 5rem;
+      padding: 0 0 0 5rem;
     }
 
     &-title {
       margin-top: 0;
+      padding-top: 1rem;
       /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include tp.small-page-header;
       color: $primary-dark;
