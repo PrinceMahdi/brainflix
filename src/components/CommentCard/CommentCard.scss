@@ -14,13 +14,10 @@
     position: relative;
     border-bottom: 2px solid $secondary-semi-dark;
     margin: 1rem 0;
-  }
-
-  &__info {
-    width: 80%;
-    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
-    @include bp.medium {
-      width: 100%;
+    max-width: 42rem;
+    @include bp.large {
+      max-width: 48rem;
+      gap: 1.5rem;
     }
   }
 
@@ -50,6 +47,9 @@
 
   &__date {
     color: $primary-semi-dark;
+    @include bp.large {
+      padding-right: 2rem;
+    }
   }
 
   &__comment {
