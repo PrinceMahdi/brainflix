@@ -16,14 +16,16 @@ function App() {
 
   const onClick = (clickEvent, videoIdClickedOn) => {
     setVideoId(videoIdClickedOn);
-    setVideos(videoIdClickedOn);
+    setVideos(getVideos(videoIdClickedOn));
     setVideoDetails(getVideosDetails(videoIdClickedOn));
   };
+
+
 
   return (
     <>
       <Header />
-      <Video videos={videos} />
+      <Video videos={videos} videoId={videoId} />
       <main className="main">
         <section className="main--left">
           <VideoInfo videoDetails={videoDetails} />
