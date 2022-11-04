@@ -5,14 +5,14 @@
 @use "../../styles/partials/mixins" as mx;
 
 .main {
-  max-width: 80rem;
-  margin: 0 auto;
-  
   @include bp.large {
     display: flex;
   }
   &--left {
     border-right: 1px solid $secondary-semi-dark;
+    @include bp.large {
+      width: 70vw;
+    }
   }
 
   &--right {

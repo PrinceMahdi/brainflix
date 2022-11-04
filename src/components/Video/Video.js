@@ -1,15 +1,12 @@
 import "./Video.scss";
-import placeholder from "../../assets/images/Mohan-muruge.jpg";
 
-const Video = () => {
+const Video = ({ videos }) => {
   return (
-    <>
-      <div className="main__video__container">
-        <video controls poster={placeholder} className="video">
-          If you don't see a video here, your browser doesn't support videos.
-        </video>
-      </div>
-    </>
+    <div className="main__video__container">
+      <video controls poster={videos.image} className="video">
+        If you don't see a video here, your browser doesn't support videos.
+      </video>
+    </div>
   );
 };
 
