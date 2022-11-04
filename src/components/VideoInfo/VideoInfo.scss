@@ -15,6 +15,7 @@
     /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       padding: 0 0 0 5rem;
+      min-width: 70vw;
     }
 
     &-title {
@@ -101,7 +102,7 @@
     }
 
     &--right {
-      padding-right: 3rem;
+      padding-right: 2rem;
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         display: flex;
@@ -126,10 +127,12 @@
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-body-copy;
+        width: 95%;
       }
       /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include tp.large-body-copy;
+        width: 95%;
       }
     }
   }
