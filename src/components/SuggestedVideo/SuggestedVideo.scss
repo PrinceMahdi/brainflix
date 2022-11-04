@@ -11,6 +11,11 @@
     margin-bottom: 1rem;
     max-width: 16rem;
     @include bp.medium {
+      max-width: 18rem;
+      margin-bottom: 1.2rem;
+    }
+    @include bp.large {
+      max-width: 18rem;
       margin-bottom: 1.2rem;
     }
   }

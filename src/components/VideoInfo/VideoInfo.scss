@@ -6,7 +6,6 @@
 
 .video {
   &__info {
-    max-width: 53rem;
     padding: 0 1rem;
     /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
@@ -16,6 +15,33 @@
     @include bp.large {
       padding: 0 0 0 5rem;
       min-width: 70vw;
+    }
+
+    &-description {
+      @include bp.large {
+        min-height: 6.875rem;
+      }
+    }
+
+    &-artist {
+      font-weight: 600;
+      @include bp.medium {
+        @include tp.large-body-copy;
+        font-weight: 600;
+      }
+      @include bp.large {
+        @include tp.large-body-copy;
+        font-weight: 600;
+      }
+    }
+
+    &-date {
+      @include bp.medium {
+        @include tp.large-body-copy;
+      }
+      @include bp.large {
+        @include tp.large-body-copy;
+      }
     }
 
     &-title {
@@ -41,6 +67,9 @@
       &-container {
         @include mx.flexbox;
         gap: 0.5rem;
+        @include bp.large {
+          min-width: 5.9375rem;
+        }
       }
       &-icon {
         width: 1.6rem;
@@ -59,6 +88,9 @@
         @include mx.flexbox(flex-start);
         gap: 0.5rem;
         line-height: 0;
+        @include bp.large {
+          min-width: 5.9375rem;
+        }
       }
       &-icon {
         width: 1.2rem;
@@ -112,6 +144,7 @@
       @include bp.large {
         display: flex;
         gap: 2rem;
+        padding-right: 1rem;
       }
     }
 

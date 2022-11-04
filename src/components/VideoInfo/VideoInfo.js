@@ -1,4 +1,5 @@
 import "./VideoInfo.scss";
+import { dateFormatter } from "../../utils/utils";
 
 const VideoInfo = ({ videoDetails }) => {
   const {
@@ -21,8 +22,8 @@ const VideoInfo = ({ videoDetails }) => {
         <h1 className="video__info-title">{title}</h1>
         <div className="video__info-container">
           <div className="video__info--left">
-            <p className="video__info-artist">{channel}</p>
-            <p className="video__info-date">{timestamp}</p>
+            <p className="video__info-artist">By {channel}</p>
+            <p className="video__info-date">{dateFormatter(timestamp)}</p>
           </div>
           <div className="video__info--right">
             <div className="video__info__view-container">

@@ -5,19 +5,14 @@
 @use "../../styles/partials/mixins" as mx;
 
 .user {
-  &__icon {
-    flex-shrink: 0;
-  }
-
   &__card {
     display: flex;
     position: relative;
-    border-bottom: 2px solid $secondary-semi-dark;
+    border-bottom: 1px solid $secondary-semi-dark;
     margin: 1rem 0;
-    max-width: 42rem;
     @include bp.large {
       max-width: 100%;
-      gap: 1.5rem;
+      gap: 3%;
     }
   }
 
@@ -26,8 +21,16 @@
     height: 2.5rem;
     border-radius: 50%;
     background-color: $secondary-semi-dark;
-    margin-right: 1rem;
     margin-top: 0.5rem;
+    flex-shrink: 0;
+    margin-right: 5%;
+
+    @include bp.medium {
+      margin-right: 3%;
+    }
+    @include bp.large {
+      margin-right: 1rem;
+    }
   }
 
   &__details {
@@ -55,7 +58,7 @@
   &__comment {
     margin-top: 0;
     color: $secondary-dark;
-    max-width: 87%;
+    max-width: 94%;
   }
   &-comment {
     &__container {
