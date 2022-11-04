@@ -15,18 +15,25 @@
     }
   }
   &__thumbnail {
-    background-image: url("../../assets/images/Mohan-muruge.jpg");
+    // background-image: url("../../assets/images/Mohan-muruge.jpg");
     width: 6rem;
     height: 3.5rem;
     border-radius: 0.25rem;
     background-size: cover;
     flex-shrink: 0;
+    @include bp.large {
+      width: 7rem;
+      height: 4rem;
+    }
   }
 
   &__stats {
     display: flex;
     flex-direction: column;
     gap: 0.3125rem;
+    @include bp.large {
+      gap: 0.5rem;
+    }
   }
 
   &__title {
@@ -38,11 +45,17 @@
     @include bp.medium {
       font-size: 0.8rem;
     }
+    @include bp.large {
+      font-size: 0.8125rem;
+    }
   }
 
   &__artist {
     font-size: 0.8125rem;
     margin: 0;
     color: $primary-dark;
+    @include bp.large {
+      font-size: 0.875rem;
+    }
   }
 }

@@ -1,16 +1,14 @@
 import "./SuggestedVideoBox.scss";
 import SuggedtedVideo from "../SuggestedVideo/SuggestedVideo";
 
-const SuggestedVideoBox = () => {
+const SuggestedVideoBox = ({ videos, onClick }) => {
   return (
-    <>
-      <div className="suggested__container">
-        <h5 className="suggested__container-title">NEXT VIDEOS</h5>
-        <SuggedtedVideo />
-        <SuggedtedVideo />
-        <SuggedtedVideo />
-      </div>
-    </>
+    <div className="suggested__container">
+      <h5 className="suggested__container-title">NEXT VIDEOS</h5>
+      {videos.map((video) => (
+        <SuggedtedVideo videos={video} key={video.id} onClick={onClick} />
+      ))}
+    </div>
   );
 };
 

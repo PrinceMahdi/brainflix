@@ -16,7 +16,7 @@
     margin: 1rem 0;
     max-width: 42rem;
     @include bp.large {
-      max-width: 48rem;
+      max-width: 100%;
       gap: 1.5rem;
     }
   }
@@ -71,5 +71,9 @@
 
   &__counter {
     margin: 0.3125rem 0 0 0;
+  }
+
+  &__info {
+    width: 100%;
   }
 }
