@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Header />
-      <Video videos={videos} videoId={videoId} />
+      <Video videoId={videoId} />
       <main className="main">
         <section className="main--left">
           <VideoInfo videoDetails={videoDetails} />

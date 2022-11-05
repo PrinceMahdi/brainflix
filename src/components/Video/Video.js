@@ -1,8 +1,7 @@
 import "./Video.scss";
 import { getVideosDetails } from "../../utils/utils";
 
-const Video = ({ videos, videoId }) => {
-
+const Video = ({ videoId }) => {
   const currentVid = getVideosDetails(videoId);
 
   return (
