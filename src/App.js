@@ -20,8 +20,6 @@ function App() {
     setVideoDetails(getVideosDetails(videoIdClickedOn));
   };
 
-
-
   return (
     <>
       <Header />

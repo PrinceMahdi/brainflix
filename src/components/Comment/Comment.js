@@ -8,7 +8,7 @@ const Comment = ({ videoDetails }) => {
   let numberOfComments = videoDetails.comments.length;
   return (
     <div className="comment">
-      <h5 className="comment__title">{numberOfComments} COMMENTS</h5>
+      <h5 className="comment__title">{numberOfComments} Comments</h5>
       <article className="comment__form-container">
         <div className="comment__form-icon"></div>
         <form className="comment__form" id="form">
