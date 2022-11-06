@@ -6,8 +6,6 @@
 
 .header {
   padding: 1rem 1rem;
-  max-width: 80rem;
-  margin: 0 auto;
   /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
   @include bp.medium {
     @include mx.flexbox;

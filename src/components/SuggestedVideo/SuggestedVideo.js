@@ -1,3 +1,4 @@
+/* ---------------- SCSS IMOPRTS ---------------- */
 import "./SuggestedVideo.scss";
 
 const SuggestedVideo = ({ videos, onClick }) => {

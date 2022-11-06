@@ -1,10 +1,24 @@
 /* ------------------------------- COLOR VARIABLES ------------------------------- */
-$primary-dark: #323232; // Black -> Primary text color
-$primary-semi-light: #0095ff; // Blue -> Primary CTA color & Active form field outline color
-$primary-semi-dark: #afafaf; // Silver -> Secondary text color & Text label color
-$primary-light: #ffffff; // Pure white -> White background & CTA text color
+// Primary text color
+$primary-dark: #323232; // Black
 
-$secondary-dark: #000000; // Pure black -> Video player components
-$secondary-semi-light: #0065ad; // Dark blue -> CTA hover state color
-$secondary-semi-dark: #e1e1e1; // Mercury -> Divider line & Form field outline color
-$secondary-light: #fafafa; // Alabaster -> Form field background color
+// Primary CTA color & Active form field outline color
+$primary-semi-light: #0095ff; // Blue
+
+// Secondary text color & Text label color
+$primary-semi-dark: #afafaf; // Silver
+
+// White background & CTA text color
+$primary-light: #ffffff; // Pure white
+
+// Video player components
+$secondary-dark: #000000; // Pure black
+
+// CTA hover state color
+$secondary-semi-light: #0065ad; // Dark blue
+
+// Divider line & Form field outline color
+$secondary-semi-dark: #e1e1e1; // Mercury
+
+//Form field background color
+$secondary-light: #fafafa; // Alabaster

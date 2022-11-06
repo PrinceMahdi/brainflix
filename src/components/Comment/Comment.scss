@@ -6,6 +6,7 @@
 
 .comment {
   padding: 0 1rem;
+
   /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
   @include bp.medium {
     padding: 0 3rem;
@@ -13,6 +14,9 @@
   /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
   @include bp.large {
     padding: 0 0 0 5rem;
+    :last-child {
+      border-bottom: 0;
+    }
   }
 
   &__title {
@@ -21,24 +25,25 @@
 
   &__form {
     width: 100%;
-    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     &-container {
       display: flex;
       gap: 3%;
       border-bottom: 1px solid $secondary-semi-dark;
       padding-bottom: 1.5rem;
-      max-width: 42rem;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
+      @include bp.small {
+        gap: 5%;
+      }
 
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include mx.flexbox;
         justify-content: stretch;
-        margin-bottom: 1.5rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include mx.flexbox;
         justify-content: stretch;
-        margin-bottom: 1.5rem;
         max-width: none;
       }
     }
@@ -54,6 +59,7 @@
       @include bp.medium {
         margin-top: 1.375rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         margin-top: 1.375rem;
         margin-right: 1rem;
@@ -66,6 +72,16 @@
         @include tp.small-sub-header;
         font-weight: 600;
       }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        @include tp.large-sub-header;
+        font-weight: 600;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+      @include bp.large {
+        @include tp.large-sub-header;
+        font-weight: 600;
+      }
     }
     &__input {
       border-radius: 0.25rem;
@@ -76,21 +92,28 @@
       resize: none;
       padding: 0.75rem 3rem 0.75rem 1rem;
       margin-top: 0.3rem;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         height: 2.7rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         height: 2.7rem;
       }
     }
 
     &-button {
+      transition: 0.3s ease;
+      &:hover {
+        @include mx.buttonHover;
+      }
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         margin-bottom: -0.5rem;
         padding: 0.75rem 3.5rem;
         height: 2.7rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         margin-bottom: -0.5rem;
         padding: 0.75rem 3.5rem;
@@ -98,18 +121,22 @@
       }
       &-container {
         position: relative;
+        /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
         @include bp.large {
           margin-right: 2rem;
         }
         &-mobile {
           position: relative;
+          /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
           @include bp.medium {
             display: none;
           }
+          /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
           @include bp.large {
             display: none;
           }
         }
+        /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
         @include bp.small {
           display: none;
         }
@@ -135,9 +162,11 @@
           position: absolute;
           top: 1.5rem;
           left: 1.1rem;
+          /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
           @include bp.medium {
             display: none;
           }
+          /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
           @include bp.large {
             display: none;
           }
