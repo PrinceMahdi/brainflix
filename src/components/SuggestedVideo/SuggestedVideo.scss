@@ -10,17 +10,24 @@
     gap: 1rem;
     margin-bottom: 1rem;
     max-width: 16rem;
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
+      max-width: 18rem;
+      margin-bottom: 1.2rem;
+    }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+    @include bp.large {
+      max-width: 18rem;
       margin-bottom: 1.2rem;
     }
   }
   &__thumbnail {
-    // background-image: url("../../assets/images/Mohan-muruge.jpg");
     width: 6rem;
     height: 3.5rem;
     border-radius: 0.25rem;
     background-size: cover;
     flex-shrink: 0;
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       width: 7rem;
       height: 4rem;
@@ -31,6 +38,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.3125rem;
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       gap: 0.5rem;
     }
@@ -42,9 +50,11 @@
     color: $primary-dark;
     font-weight: 600;
     margin: 0;
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       font-size: 0.8rem;
     }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       font-size: 0.8125rem;
     }
@@ -54,6 +64,7 @@
     font-size: 0.8125rem;
     margin: 0;
     color: $primary-dark;
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       font-size: 0.875rem;
     }
