@@ -2,6 +2,10 @@
 
 BrainFlix is a project written in React.js and Scss.
 
+## Site Link
+
+https://magnificent-phoenix-2d2f62.netlify.app/
+
 ## Deployment
 
 To run this project, do
