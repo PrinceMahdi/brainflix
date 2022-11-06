@@ -1,4 +1,6 @@
+// <------------- SCSS IMPORTS ------------->
 import "./SuggestedVideoBox.scss";
+// <------------- COMPONENT IMPORTS ------------->
 import SuggedtedVideo from "../SuggestedVideo/SuggestedVideo";
 
 const SuggestedVideoBox = ({ videos, onClick }) => {

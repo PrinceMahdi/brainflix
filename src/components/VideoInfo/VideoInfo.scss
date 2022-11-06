@@ -18,17 +18,25 @@
     }
 
     &-description {
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        @include tp.large-body-copy;
+      }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
+        @include tp.large-body-copy;
         min-height: 6.875rem;
       }
     }
 
     &-artist {
       font-weight: 600;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-body-copy;
         font-weight: 600;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include tp.large-body-copy;
         font-weight: 600;
@@ -36,9 +44,11 @@
     }
 
     &-date {
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-body-copy;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include tp.large-body-copy;
       }
@@ -67,6 +77,7 @@
       &-container {
         @include mx.flexbox;
         gap: 0.5rem;
+        /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
         @include bp.large {
           min-width: 5.9375rem;
         }
@@ -88,6 +99,7 @@
         @include mx.flexbox(flex-start);
         gap: 0.5rem;
         line-height: 0;
+        /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
         @include bp.large {
           min-width: 5.9375rem;
         }

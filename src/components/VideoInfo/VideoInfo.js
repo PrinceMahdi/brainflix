@@ -1,20 +1,11 @@
+// <------------- SCSS IMPORTS ------------->
 import "./VideoInfo.scss";
-import { dateFormatter } from "../../utils/utils";
+// <------------- FUNCTION IMPORTS ------------->
+import { dynamicDate } from "../../utils/utils";
 
 const VideoInfo = ({ videoDetails }) => {
-  const {
-    channel,
-    comments,
-    description,
-    duration,
-    id,
-    likes,
-    timestamp,
-    title,
-    video,
-    views,
-    ...rest
-  } = videoDetails;
+  const { channel, description, likes, timestamp, title, views, ...rest } =
+    videoDetails;
 
   return (
     <>
@@ -23,7 +14,7 @@ const VideoInfo = ({ videoDetails }) => {
         <div className="video__info-container">
           <div className="video__info--left">
             <p className="video__info-artist">By {channel}</p>
-            <p className="video__info-date">{dateFormatter(timestamp)}</p>
+            <p className="video__info-date">{dynamicDate(timestamp)}</p>
           </div>
           <div className="video__info--right">
             <div className="video__info__view-container">

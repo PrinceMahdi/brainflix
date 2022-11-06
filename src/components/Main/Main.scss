@@ -5,11 +5,13 @@
 @use "../../styles/partials/mixins" as mx;
 
 .main {
+  /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
   @include bp.large {
     display: flex;
   }
   &--left {
     border-right: 1px solid $secondary-semi-dark;
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       width: 70vw;
       height: 93vh;
@@ -17,6 +19,7 @@
   }
 
   &--right {
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       padding-left: 2rem;
     }

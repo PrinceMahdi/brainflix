@@ -12,26 +12,17 @@ export const getVideosDetails = (vidId) => {
   return VideoDetails.find((video) => video.id === vidId);
 };
 
-// ---------------------------------- DATE FORMATTER FUNCTION ----------------------------------
-// Format the date in a mm-dd-yyyy
-export const dateFormatter = (epochTime) => {
-  let date = new Date(epochTime);
-
-  return date.toLocaleString("en-US", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-};
-
-// <---------------------------------- DYNAMIC DATE FORMATTER ---------------------------------->
-/**
+// <--------------------- DYNAMIC DATE FORMATTER --------------------->
+/*
+ * * @param dateOfComment
+ * @returns
  * A function that evaluates how long ago the comment was made
  * Using the Date.now() function to record the current time commented
  * Date.now() function returns a value in miliseconds so all variables are converted accordingly
  * The function returns a dynamic date until the comment is over a week old
  * Then the function will turn the date into a mm/dd/yyyy format
  */
+
 export const dynamicDate = (dateOfComment) => {
   const now = Date.now();
   const timeElapsed = now - dateOfComment;
@@ -43,12 +34,15 @@ export const dynamicDate = (dateOfComment) => {
   const month = week * 4;
   const year = month * 12;
 
-  // Returns a new date object when called as a constructor - Refer to documentation
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-  let date = new Date(timeElapsed);
+  let date = new Date(dateOfComment);
 
   if (timeElapsed > year) {
-    return date.toLocaleDateString();
+    // Custom formatting to get the month and day in double digits
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
   }
   if (timeElapsed > month) {
     const howManyMonths = Math.round(timeElapsed / month);

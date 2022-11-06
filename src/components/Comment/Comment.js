@@ -1,11 +1,13 @@
+// <------------- SCSS IMPORTS ------------->
 import "./Comment.scss";
+// <------------- COMPONENT IMPORTS ------------->
 import CommentCard from "../CommentCard/CommentCard";
 
 const Comment = ({ videoDetails }) => {
-  // Grabbing the length of each comment array so I can set it 
-  // dynamically on line 9
-
+  // Grabbing the length of each comment array so I can set it
+  // dynamically
   let numberOfComments = videoDetails.comments.length;
+
   return (
     <div className="comment">
       <h5 className="comment__title">{numberOfComments} Comments</h5>

@@ -1,10 +1,10 @@
+// <------------- SCSS IMPORT ------------->
 import "./CommentCard.scss";
-import { dateFormatter } from "../../utils/utils";
+// <------------- FUNCTION IMPORTS ------------->
 import { randomAvatar } from "../../utils/utils";
 import { dynamicDate } from "../../utils/utils";
 
 const CommentCard = ({ comment }) => {
-  console.log(typeof comment.comment)
   return (
     <div className="user__card">
       <div
@@ -16,7 +16,8 @@ const CommentCard = ({ comment }) => {
       <div className="user__info">
         <div className="user__details">
           <p className="user__name">{comment.name}</p>
-          <p className="user__date">{dateFormatter(comment.timestamp)}</p>
+          {/* Converting the timestamp to a Number making sure it works for when I add the comment functionality */}
+          <p className="user__date">{dynamicDate(Number(comment.timestamp))}</p>
         </div>
         <div className="user-comment__container">
           <p className="user__comment">{comment.comment}</p>
