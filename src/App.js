@@ -4,9 +4,11 @@ import { useState } from "react";
 // <--------------------- FUNCTION IMPORTS --------------------->
 import { getVideos, getVideosDetails } from "./utils/utils";
 
+// <--------------------- SCSS IMPORTS --------------------->
+import "./App.scss";
+
 // <--------------------- COMPONENT IMPORTS --------------------->
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
 import Video from "./components/Video/Video";
 import Comment from "./components/Comment/Comment";
 import SuggestedVideoBox from "./components/SuggestedVideoBox/SuggestedVideoBox";

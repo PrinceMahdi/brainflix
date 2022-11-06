@@ -4,8 +4,7 @@ import "./VideoInfo.scss";
 import { dynamicDate } from "../../utils/utils";
 
 const VideoInfo = ({ videoDetails }) => {
-  const { channel, description, likes, timestamp, title, views, ...rest } =
-    videoDetails;
+  const { channel, description, likes, timestamp, title, views } = videoDetails;
 
   return (
     <>

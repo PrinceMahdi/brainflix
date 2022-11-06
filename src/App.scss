@@ -1,6 +1,28 @@
 /* ------------------------------- PARTIAL IMPORTS ------------------------------- */
-@forward "./styles/partials/colors";
-@forward "./styles/partials/breakpoints";
-@forward "./styles/partials/fonts";
-@forward "./styles/partials/typography";
-@forward "./styles/partials/reset";
+@use "./styles/partials/reset";
+@use "./styles/partials/fonts";
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/typography" as tp;
+@use "./styles/partials/breakpoints" as bp;
+
+.main {
+  /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+  @include bp.large {
+    display: flex;
+  }
+  &--left {
+    border-right: 1px solid $secondary-semi-dark;
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+    @include bp.large {
+      width: 70vw;
+      height: 93vh;
+    }
+  }
+
+  &--right {
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
+    @include bp.large {
+      padding-left: 2rem;
+    }
+  }
+}
