@@ -151,6 +151,7 @@
       @include bp.medium {
         display: flex;
         gap: 2rem;
+        padding-right: 0;
       }
       /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
