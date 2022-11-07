@@ -17,7 +17,6 @@ const Comment = ({ videoDetails }) => {
           <label htmlFor="comment" className="comment__form__label">
             JOIN THE CONVERSATION
           </label>
-          <br></br>
           <textarea
             className="comment__form__input"
             placeholder="Add a new comment"
