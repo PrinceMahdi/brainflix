@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// <--------------------- FUNCTION IMPORTS --------------------->
+// <---------------------- FUNCTION IMPORTS ---------------------->
 import { getVideos, getVideosDetails } from "../../utils/utils";
 
 // <--------------------- API INFORMATION --------------------->
