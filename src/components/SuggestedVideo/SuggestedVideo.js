@@ -1,20 +1,17 @@
 /* ---------------- SCSS IMOPRTS ---------------- */
 import "./SuggestedVideo.scss";
 
-const SuggestedVideo = ({ videos, onClick }) => {
+const SuggestedVideo = ({ video }) => {
   return (
-    <div
-      className="video__container"
-      onClick={(clickEvent) => onClick(clickEvent, videos.id)}
-    >
+    <div className="video__container">
       <img
         className="video__thumbnail"
-        src={videos.image}
+        src={video.image}
         alt="Video Thumbnail"
       ></img>
       <div className="video__stats">
-        <p className="video__title">{videos.title}</p>
-        <p className="video__artist">{videos.channel}</p>
+        <p className="video__title">{video.title}</p>
+        <p className="video__artist">{video.channel}</p>
       </div>
     </div>
   );

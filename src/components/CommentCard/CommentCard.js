@@ -4,7 +4,7 @@ import "./CommentCard.scss";
 import { randomAvatar } from "../../utils/utils";
 import { dynamicDate } from "../../utils/utils";
 
-const CommentCard = ({ comment }) => {
+const CommentCard = ({ comment, name, date }) => {
   return (
     <div className="user__card">
       <div
@@ -15,12 +15,12 @@ const CommentCard = ({ comment }) => {
       ></div>
       <div className="user__info">
         <div className="user__details">
-          <p className="user__name">{comment.name}</p>
+          <p className="user__name">{name}</p>
           {/* Converting the timestamp to a Number making sure it works for when I add the comment functionality */}
-          <p className="user__date">{dynamicDate(Number(comment.timestamp))}</p>
+          <p className="user__date">{dynamicDate(Number(date))}</p>
         </div>
         <div className="user-comment__container">
-          <p className="user__comment">{comment.comment}</p>
+          <p className="user__comment">{comment}</p>
         </div>
       </div>
     </div>

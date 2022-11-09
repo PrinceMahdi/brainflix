@@ -11,56 +11,56 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// <---------------------- FUNCTION IMPORTS ---------------------->
-import { getVideos, getVideosDetails } from "../../utils/utils";
-
 // <--------------------- API INFORMATION --------------------->
 const url = `https://project-2-api.herokuapp.com/videos?api_key=${process.env.REACT_APP_API_KEY}`;
 
 const HomePage = () => {
-  //   const { videoId } = useParams();
-  //   const { navigate } = useNavigate();
+  
+  // setting the initial video as the first video
+  const [mainVideo, setMainVideo] = useState(
+    "84e96018-4022-434e-80bf-000ce4cd12b8"
+  );
+  const [videoDetails, setVideoDetails] = useState([]);
+  const [videos, setVideos] = useState([]);
 
-  // Setting the default video on refresh the first video from the data file
-  const firstVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
-  const [videoId, setVideoId] = useState(firstVideoID);
-
-  const [videos, setVideos] = useState(getVideos(videoId));
-  const [videoDetails, setVideoDetails] = useState(getVideosDetails(videoId));
-
-  const searchVideoById = async (video) => {
-    const response = await axios.get(url);
-    // console.log(response)
-  };
-
+  // <--------------------- useEffect FOR FETCHING VIDEO DETAILS --------------------->
   useEffect(() => {
-    const fetchDate = async () => {
+    const getVideoDetails = async () => {
       try {
-        const { data } = await axios.get(url);
-        console.log(data);
+        const { data } = await axios.get(
+          `https://project-2-api.herokuapp.com/videos/${mainVideo}?api_key=${process.env.REACT_APP_API_KEY}`
+        );
+        setVideoDetails(data);
       } catch (error) {
         console.log("You got an error!", error);
       }
     };
-    fetchDate();
+    getVideoDetails();
   }, []);
 
-  const onClick = (clickEvent, videoIdClickedOn) => {
-    setVideoId(videoIdClickedOn);
-    setVideos(getVideos(videoIdClickedOn));
-    setVideoDetails(getVideosDetails(videoIdClickedOn));
-  };
+  // <--------------------- useEffect FOR FETCHING VIDEOS --------------------->
+  useEffect(() => {
+    const getVideos = async () => {
+      try {
+        const { data } = await axios.get(url);
+        setVideos(data);
+      } catch (error) {
+        console.log("You got an error!", error);
+      }
+    };
+    getVideos();
+  }, []);
 
   return (
     <>
-      <Video videoId={videoId} />
+      <Video videoDetails={videoDetails} />
       <main className="main">
         <section className="main--left">
           <VideoInfo videoDetails={videoDetails} />
           <Comment videoDetails={videoDetails} />
         </section>
         <section className="main--right">
-          <SuggestedVideoBox videos={videos} onClick={onClick} />
+          <SuggestedVideoBox videos={videos} videoDetails={videoDetails} />
         </section>
       </main>
     </>
