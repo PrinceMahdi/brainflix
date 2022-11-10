@@ -8,13 +8,16 @@
   border-bottom: 1px solid $secondary-semi-dark;
 }
 
-.upload {
+.section {
   &-wrapper {
     @include bp.large {
       display: flex;
       gap: 3%;
     }
   }
+}
+
+.upload {
   &-page {
     @include bp.small {
       padding: 0 1rem;
