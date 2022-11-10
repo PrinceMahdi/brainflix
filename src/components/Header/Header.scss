@@ -81,14 +81,25 @@
 
   &__upload {
     &-container {
+      @include mx.flexbox;
+      max-width: 18rem;
+      margin: 0 auto;
       position: relative;
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
-        gap: 5%;
+        margin-right: 0.75rem;
+        gap: 2rem;
       }
       /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
-        gap: 5%;
+        margin-right: 0.75rem;
+        gap: 2rem;
+      }
+    }
+
+    &-link {
+      @include bp.small {
+        width: 100%;
       }
     }
     &-icon {
@@ -108,11 +119,6 @@
       }
     }
 
-    &-container {
-      @include mx.flexbox;
-      max-width: 18rem;
-      margin: 0 auto;
-    }
     &-button {
       @include mx.button;
       width: 100%;

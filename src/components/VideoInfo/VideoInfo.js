@@ -1,12 +1,18 @@
+// <------------- REACT IMPORTS ------------->
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 // <------------- SCSS IMPORTS ------------->
 import "./VideoInfo.scss";
 // <------------- FUNCTION IMPORTS ------------->
 import { dynamicDate } from "../../utils/utils";
 
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+const VideoInfo = ({ videoDetails, clickedVideoFunction, mainVideo }) => {
+  const params = useParams();
+  const videoId = params.videoId ? params.videoId : mainVideo;
+  useEffect(() => {
+    clickedVideoFunction(videoId);
+  }, [videoId]);
 
-const VideoInfo = ({ videoDetails }) => {
   return (
     <>
       <div className="video__info">

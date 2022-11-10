@@ -2,6 +2,7 @@
 import "./SuggestedVideoBox.scss";
 // <------------- COMPONENT IMPORTS ------------->
 import SuggedtedVideo from "../SuggestedVideo/SuggestedVideo";
+import { Link } from "react-router-dom";
 
 const SuggestedVideoBox = ({ videos, videoDetails }) => {
   return (
@@ -13,7 +14,9 @@ const SuggestedVideoBox = ({ videos, videoDetails }) => {
         .map((video) => {
           return (
             <div key={video.id}>
-              <SuggedtedVideo video={video} />
+              <Link to={`/${video.id}`}>
+                <SuggedtedVideo video={video} />
+              </Link>
             </div>
           );
         })}
