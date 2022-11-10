@@ -2,15 +2,14 @@
 import "./Comment.scss";
 // <------------- COMPONENT IMPORTS ------------->
 import CommentCard from "../CommentCard/CommentCard";
+import { useParams } from "react-router-dom";
 
 const Comment = ({ videoDetails }) => {
-  // Grabbing the length of each comment array so I can set it
-  // dynamically
-  let numberOfComments = videoDetails.comments.length;
+  let commentLength = videoDetails.comments?.length;
 
   return (
     <div className="comment">
-      <h5 className="comment__title">{numberOfComments} Comments</h5>
+      <h5 className="comment__title">{commentLength} Comments</h5>
       <article className="comment__form-container">
         <div className="comment__form-icon"></div>
         <form className="comment__form" id="form">
@@ -35,8 +34,13 @@ const Comment = ({ videoDetails }) => {
           <button className="comment__form-button">COMMENT</button>
         </div>
       </article>
-      {videoDetails.comments.map((comment) => (
-        <CommentCard comment={comment} key={comment.id} />
+      {videoDetails.comments?.map((data, index) => (
+        <CommentCard
+          comment={data.comment}
+          name={data.name}
+          date={data.timestamp}
+          key={index}
+        />
       ))}
     </div>
   );

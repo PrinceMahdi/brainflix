@@ -4,15 +4,17 @@ import "./Header.scss";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
       <header className="header">
-        <div className="header__logo-container">
-          <a className="header__logo-link" href="../../App.js">
+        <Link to={"/"}>
+          <div className="header__logo-container">
             <img src={logo} alt="BrainFlix Logo"></img>
-          </a>
-        </div>
+          </div>
+        </Link>
         <div className="header__info-container">
           <div className="header__search-container">
             <div className="header__search-icon"></div>
@@ -25,7 +27,9 @@ const Header = () => {
           </div>
           <div className="header__upload-container">
             <div className="header__upload-icon"></div>
-            <button className="header__upload-button">UPLOAD</button>
+            <Link to={"/upload"} className="header__upload-link">
+              <button className="header__upload-button">UPLOAD</button>
+            </Link>
             <img
               className="header__avatar-medium"
               src={avatar}
