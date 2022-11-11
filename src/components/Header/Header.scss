@@ -121,6 +121,7 @@
 
     &-button {
       @include mx.button;
+      font-family: "Avenir";
       width: 100%;
       font-weight: 600;
       transition: 0.3s ease;

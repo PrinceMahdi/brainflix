@@ -38,8 +38,10 @@ const UploadPage = () => {
               ></textarea>
             </div>
             <div className="video__button-wrapper">
-              <Link to={"/"} className="video__button-container">
+              <Link to={"/uploadSuccess"}>
                 <button className="video__publish-button">PUBLISH</button>
+              </Link>
+              <Link to={"/"}>
                 <button className="video__cancel-button">CANCEL</button>
               </Link>
             </div>

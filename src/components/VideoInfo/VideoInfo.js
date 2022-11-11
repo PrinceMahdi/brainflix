@@ -21,7 +21,7 @@ const VideoInfo = ({ videoDetails, clickedVideoFunction, mainVideo }) => {
           <div className="video__info--left">
             <p className="video__info-artist">By {videoDetails.channel}</p>
             <p className="video__info-date">
-              {dynamicDate(videoDetails.videoDate)}
+              {dynamicDate(videoDetails.timestamp)}
             </p>
           </div>
           <div className="video__info--right">

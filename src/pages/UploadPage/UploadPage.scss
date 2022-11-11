@@ -65,6 +65,7 @@
       color: $primary-semi-dark;
     }
     &-input {
+      font-family: "Avenir";
       width: 100%;
       resize: none;
       padding: 0.9rem;
@@ -130,6 +131,7 @@
       }
     }
     &-input {
+      font-family: "Avenir";
       width: 100%;
       border-radius: 0.25rem;
       resize: none;
@@ -145,22 +147,14 @@
       @include bp.medium {
         max-width: 22.1rem;
         margin-left: auto;
+        display: flex;
+        flex-direction: row-reverse;
       }
       @include bp.large {
         max-width: 22.1rem;
         margin-left: auto;
-      }
-    }
-    &-container {
-      @include bp.small {
         display: flex;
-        flex-direction: column;
-      }
-      @include bp.medium {
-        display: flex;
-      }
-      @include bp.large {
-        display: flex;
+        flex-direction: row-reverse;
       }
     }
   }
@@ -171,6 +165,9 @@
       background-color: $primary-light;
       color: $primary-semi-light;
       border: none;
+      @include bp.small {
+        width: 100%;
+      }
       @include bp.medium {
         padding: 0.75rem 3.5rem;
         margin-right: 1rem;
@@ -193,6 +190,9 @@
       background-repeat: no-repeat;
       background-position-y: center;
       background-position-x: 0.5rem;
+      @include bp.small {
+        width: 100%;
+      }
 
       @include bp.medium {
         padding: 0.75rem 3.5rem;

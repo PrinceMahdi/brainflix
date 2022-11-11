@@ -18,6 +18,7 @@
     }
 
     &-description {
+      color: $primary-dark;
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-body-copy;
@@ -31,6 +32,7 @@
 
     &-artist {
       font-weight: 600;
+      color: $primary-dark;
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-body-copy;
