@@ -16,6 +16,22 @@ To run this project, do
 
 To make sure you have the `node_modules` folder installed locally.
 
+<br>
+
+# BrainFlix Sprint-two
+## What went well?
+- The SCSS section went smoothly as I now have a very good grasp of various CSS properties that can accomplish tasks very well. 
+- Making Axios calls to the API was nice as well, especially with the new Async Await syntax
+
+## What went wrong?
+- I had an issue with an uncaught promise while pressing on the header logo but I fixed that with a ternary operator
+
+## What could be improved?
+- I used an extra axios call to handle the clicking of the videos, I'm sure that could be handled better.
+
+<br>
+
+# BrainFlix Sprint-one
 ## Diving Deeper Section
 
 - I have implemented the Dynamic Date timestamp on the comments and the published date of the video.

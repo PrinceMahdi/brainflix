@@ -65,7 +65,7 @@
 
   &__comment {
     margin-top: 0;
-    color: $secondary-dark;
+    color: $primary-dark;
     max-width: 94%;
     /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
     @include bp.small {

@@ -1,0 +1,39 @@
+/* ---------------- PARTIAL IMPORTS ---------------- */
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as bp;
+@use "../../styles/partials/typography" as tp;
+@use "../../styles/partials/mixins" as mx;
+
+.success {
+  &-page {
+    &__wrapper {
+      text-align: center;
+      margin-top: 5rem;
+
+      // Decorating the "redirected" text
+      h4 span {
+        @include mx.fancyText;
+      }
+    }
+
+    &__sub {
+      &-title {
+        color: $primary-dark;
+      }
+    }
+    &__title {
+      font-size: 6rem;
+      margin-bottom: 1.25rem;
+      @include mx.fancyText;
+
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
+      @include bp.small {
+        font-size: 2rem;
+      }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
+      @include bp.medium {
+        font-size: 4rem;
+      }
+    }
+  }
+}
