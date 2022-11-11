@@ -6,15 +6,14 @@
 
 .suggested {
   &__container {
-    @include bp.large {
-      // border-left: 1px solid $secondary-semi-dark;
-    }
     &-title {
       color: $primary-semi-dark;
     }
+    /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
     @include bp.small {
       padding: 0 1rem;
     }
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       padding: 0 3rem;
     }

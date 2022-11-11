@@ -36,6 +36,7 @@
 
   &__avatar {
     &-medium {
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         display: none;
       }
@@ -98,6 +99,7 @@
     }
 
     &-link {
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         width: 100%;
       }

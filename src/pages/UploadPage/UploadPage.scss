@@ -10,6 +10,7 @@
 
 .section {
   &-wrapper {
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       display: flex;
       gap: 3%;
@@ -19,22 +20,27 @@
 
 .upload {
   &-page {
+    /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
     @include bp.small {
       padding: 0 1rem;
     }
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       padding: 0 3rem;
     }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       padding: 0 5rem;
     }
     &__header {
       margin-top: 1.5rem;
       color: $primary-dark;
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         border-bottom: 1px solid $secondary-semi-dark;
         padding-bottom: 1.5rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         border-bottom: 1px solid $secondary-semi-dark;
         padding-bottom: 1.5rem;
@@ -52,14 +58,17 @@
 .video {
   &__header {
     margin-bottom: 0.3rem;
+    /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
     @include bp.small {
       @include tp.small-sub-header;
       color: $primary-semi-dark;
     }
+    /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       @include tp.large-sub-header;
       color: $primary-semi-dark;
     }
+    /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       @include tp.large-sub-header;
       color: $primary-semi-dark;
@@ -79,14 +88,17 @@
   &-container {
     &__title {
       margin-bottom: 0.3rem;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         @include tp.small-sub-header;
         color: $primary-semi-dark;
       }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-sub-header;
         color: $primary-semi-dark;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include tp.large-sub-header;
         color: $primary-semi-dark;
@@ -98,6 +110,7 @@
       width: 100%;
       max-width: 18rem;
       height: 11rem;
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         width: 18rem;
         height: 12.3rem;
@@ -106,10 +119,12 @@
   }
   &__description {
     &-container {
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         border-bottom: 1px solid $secondary-semi-dark;
         margin-bottom: 1.5rem;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         border-bottom: 1px solid $secondary-semi-dark;
         margin-bottom: 1.5rem;
@@ -117,14 +132,17 @@
     }
     &-title {
       margin-bottom: 0.3rem;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         @include tp.small-sub-header;
         color: $primary-semi-dark;
       }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         @include tp.large-sub-header;
         color: $primary-semi-dark;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         @include tp.large-sub-header;
         color: $primary-semi-dark;
@@ -144,12 +162,14 @@
   }
   &__button {
     &-wrapper {
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         max-width: 22.1rem;
         margin-left: auto;
         display: flex;
         flex-direction: row-reverse;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         max-width: 22.1rem;
         margin-left: auto;
@@ -165,14 +185,17 @@
       background-color: $primary-light;
       color: $primary-semi-light;
       border: none;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         width: 100%;
       }
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         padding: 0.75rem 3.5rem;
         margin-right: 1rem;
         order: 1;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         padding: 0.75rem 3.5rem;
         margin-right: 1rem;
@@ -190,14 +213,16 @@
       background-repeat: no-repeat;
       background-position-y: center;
       background-position-x: 0.5rem;
+      /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
       @include bp.small {
         width: 100%;
       }
-
+      /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         padding: 0.75rem 3.5rem;
         order: 2;
       }
+      /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         padding: 0.75rem 3.5rem;
         order: 2;

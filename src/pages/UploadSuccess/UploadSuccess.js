@@ -1,4 +1,6 @@
+/* ---------------- SCSS IMPORTS ---------------- */
 import "./UploadSuccess.scss";
+/* ---------------- REACT IMPORTS ---------------- */
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +11,7 @@ const UploadSuccess = () => {
   // We need a useEffect here because we only wanna run the setTimeout once on mount
   useEffect(() => {
     const timer = setTimeout(() => {
+      // Going back to home page after 2.5 seconds
       navigate("/");
     }, 2500);
     // We need to clear timeout so prevent memory leaks
@@ -22,7 +25,9 @@ const UploadSuccess = () => {
       <h3 className="success-page__sub-title">
         You've successfully uploaded a video.
       </h3>
-      <h4>Please wait to be redirected.</h4>
+      <h4>
+        Please wait to be <span>redirected</span>.
+      </h4>
     </div>
   );
 };

@@ -9,6 +9,7 @@ const CommentCard = ({ comment, name, date }) => {
     <div className="user__card">
       <div
         className="user__icon"
+        // Adding a random avatar through an API
         style={{
           backgroundImage: `url(${randomAvatar()})`,
         }}
