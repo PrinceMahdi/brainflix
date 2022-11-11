@@ -38,3 +38,27 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+/* ------------- MIXIN FOR COLORED BACKROUND TEXT ------------- */
+@mixin fancyText {
+  /* This is a fall-back color in case browsers don't support the background-clip */
+  background-color: $main-background-color;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+
+  /* Applying the colors to the text only and excluding the background */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

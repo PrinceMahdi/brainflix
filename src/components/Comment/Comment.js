@@ -2,9 +2,9 @@
 import "./Comment.scss";
 // <------------- COMPONENT IMPORTS ------------->
 import CommentCard from "../CommentCard/CommentCard";
-import { useParams } from "react-router-dom";
 
 const Comment = ({ videoDetails }) => {
+  // Adding the length of comments if it's not undefined
   let commentLength = videoDetails.comments?.length;
 
   return (
@@ -34,6 +34,7 @@ const Comment = ({ videoDetails }) => {
           <button className="comment__form-button">COMMENT</button>
         </div>
       </article>
+      {/* Mapping throught the comments array only if it's not undefined */}
       {videoDetails.comments?.map((data, index) => (
         <CommentCard
           comment={data.comment}

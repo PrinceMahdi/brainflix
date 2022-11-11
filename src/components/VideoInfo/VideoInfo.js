@@ -7,8 +7,11 @@ import "./VideoInfo.scss";
 import { dynamicDate } from "../../utils/utils";
 
 const VideoInfo = ({ videoDetails, clickedVideoFunction, mainVideo }) => {
+  // params => ID of videos
   const params = useParams();
+  // If there is an ID, set it to videoId, if not, set the ID to the first video
   const videoId = params.videoId ? params.videoId : mainVideo;
+  // Dealing with the clicking on the side videos, adding a dependency since I want this to run multiple times
   useEffect(() => {
     clickedVideoFunction(videoId);
   }, [videoId]);
@@ -21,7 +24,7 @@ const VideoInfo = ({ videoDetails, clickedVideoFunction, mainVideo }) => {
           <div className="video__info--left">
             <p className="video__info-artist">By {videoDetails.channel}</p>
             <p className="video__info-date">
-              {dynamicDate(videoDetails.videoDate)}
+              {dynamicDate(videoDetails.timestamp)}
             </p>
           </div>
           <div className="video__info--right">

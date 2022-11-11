@@ -1,5 +1,8 @@
+/* ---------------- SCSS IMPORTS ---------------- */
 import "./UploadPage.scss";
+/* ---------------- ASSET IMPORTS ---------------- */
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
+/* ---------------- REACT IMPORTS ---------------- */
 import { Link } from "react-router-dom";
 
 const UploadPage = () => {
@@ -38,8 +41,12 @@ const UploadPage = () => {
               ></textarea>
             </div>
             <div className="video__button-wrapper">
-              <Link to={"/"} className="video__button-container">
+              {/* Linking to the upload success page */}
+              <Link to={"/uploadSuccess"}>
                 <button className="video__publish-button">PUBLISH</button>
+              </Link>
+              {/* Linking to the home page */}
+              <Link to={"/"}>
                 <button className="video__cancel-button">CANCEL</button>
               </Link>
             </div>
