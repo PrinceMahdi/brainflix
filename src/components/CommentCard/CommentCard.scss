@@ -18,8 +18,8 @@
   }
 
   &__icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
     border-radius: 50%;
     background-color: $secondary-semi-dark;
     margin-top: 0.5rem;
@@ -29,10 +29,14 @@
     /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       margin-right: 3%;
+      width: 2.7rem;
+      height: 2.7rem;
     }
     /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       margin-right: 1rem;
+      width: 2.7rem;
+      height: 2.7rem;
     }
   }
 

@@ -24,7 +24,8 @@ li {
   list-style-type: none;
 }
 
-::placeholder {
+::placeholder,
+button {
   font-family: "Avenir";
   color: $primary-dark;
 }
