@@ -49,8 +49,8 @@
     }
     &-icon {
       background-image: url("../../assets/images/Mohan-muruge.jpg");
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.7rem;
+      height: 2.7rem;
       border-radius: 50%;
       background-size: cover;
       margin-top: 1.5rem;
@@ -58,11 +58,15 @@
       /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
       @include bp.medium {
         margin-top: 1.375rem;
+        width: 2.7rem;
+        height: 2.7rem;
       }
       /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
       @include bp.large {
         margin-top: 1.375rem;
         margin-right: 1rem;
+        width: 2.7rem;
+        height: 2.7rem;
       }
     }
     &__label {

@@ -35,12 +35,12 @@ const Comment = ({ videoDetails }) => {
         </div>
       </article>
       {/* Mapping throught the comments array only if it's not undefined */}
-      {videoDetails.comments?.map((data, index) => (
+      {videoDetails.comments?.map((data) => (
         <CommentCard
           comment={data.comment}
           name={data.name}
           date={data.timestamp}
-          key={index}
+          key={data.id}
         />
       ))}
     </div>

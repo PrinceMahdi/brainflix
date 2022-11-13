@@ -143,10 +143,20 @@
   }
 
   &__avatar {
+    background-image: url("../../assets/images/Mohan-muruge.jpg");
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
     background-size: cover;
+    flex-shrink: 0;
+    &-medium {
+      background-image: url("../../assets/images/Mohan-muruge.jpg");
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background-size: cover;
+      flex-shrink: 0;
+    }
     /* --------------- STYLING FOR MEDIUM DEVICES --------------- */
     @include bp.medium {
       display: none;
