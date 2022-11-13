@@ -20,11 +20,7 @@ const Header = () => {
           <div className="header__search-container">
             <div className="header__search-icon"></div>
             <input className="header__search-box" placeholder="Search"></input>
-            <img
-              className="header__avatar"
-              src={avatar}
-              alt="Moham Muruge Avatar"
-            ></img>
+            <div className="header__avatar"></div>
           </div>
           <div className="header__upload-container">
             <div className="header__upload-icon"></div>
@@ -32,11 +28,7 @@ const Header = () => {
             <Link to={"/upload"} className="header__upload-link">
               <button className="header__upload-button">UPLOAD</button>
             </Link>
-            <img
-              className="header__avatar-medium"
-              src={avatar}
-              alt="Moham Muruge Avatar"
-            ></img>
+            <div className="header__avatar-medium"></div>
           </div>
         </div>
       </header>
