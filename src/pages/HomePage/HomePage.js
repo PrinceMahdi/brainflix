@@ -35,7 +35,7 @@ const HomePage = () => {
     setVideoDetails(data);
   };
 
-  // <--------------------- useEffect FOR FETCHING VIDEO DETAILS --------------------->
+  // <-------------------- useEffect FOR FETCHING VIDEO DETAILS -------------------->
   useEffect(() => {
     const getVideoDetails = async () => {
       try {
