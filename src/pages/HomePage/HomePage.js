@@ -11,7 +11,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // <--------------------- API INFORMATION --------------------->
-const url = `https://project-2-api.herokuapp.com/videos?api_key=${process.env.REACT_APP_API_KEY}`;
+const BACKEND_URL =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
+
 const clickedVideo = (videoId) =>
   `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${process.env.REACT_APP_API_KEY}`;
 
@@ -39,9 +41,7 @@ const HomePage = () => {
   useEffect(() => {
     const getVideoDetails = async () => {
       try {
-        const { data } = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${mainVideo}?api_key=${process.env.REACT_APP_API_KEY}`
-        );
+        const { data } = await axios.get(`${BACKEND_URL}/videos/${mainVideo}`);
         setVideoDetails(data);
       } catch (error) {
         console.log("You got an error!", error);
@@ -54,7 +54,7 @@ const HomePage = () => {
   useEffect(() => {
     const getVideos = async () => {
       try {
-        const { data } = await axios.get(url);
+        const { data } = await axios.get(`${BACKEND_URL}/videos`);
         setVideos(data);
       } catch (error) {
         console.log("You got an error!", error);
