@@ -6,13 +6,13 @@
 
 .video {
   &__container {
-    @include mx.flexbox(space-between);
+    @include mx.flexbox(flex-start);
     gap: 1rem;
     margin-bottom: 1rem;
     max-width: 16rem;
     /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
-      max-width: 18rem;
+      max-width: 17rem;
       margin-bottom: 1.2rem;
     }
     /* ---------------- STYLING FOR LARGE DEVICES ---------------- */

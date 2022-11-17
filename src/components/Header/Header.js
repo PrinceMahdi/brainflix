@@ -2,7 +2,6 @@
 import "./Header.scss";
 /* ---------------- IMAGE IMPORTS ---------------- */
 import logo from "../../assets/images/BrainFlix-logo.svg";
-import avatar from "../../assets/images/Mohan-muruge.jpg";
 /* ---------------- REACT IMPORTS ---------------- */
 import { Link } from "react-router-dom";
 
