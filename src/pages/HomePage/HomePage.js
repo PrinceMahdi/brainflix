@@ -14,8 +14,7 @@ import axios from "axios";
 const BACKEND_URL =
   process.env.REACT_APP_BACKEND_URL || "http://localhost:8080";
 
-const clickedVideo = (videoId) =>
-  `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${process.env.REACT_APP_API_KEY}`;
+const clickedVideo = (videoId) => `${BACKEND_URL}/videos/${videoId}`;
 
 const HomePage = () => {
   // setting the initial video as the first video
