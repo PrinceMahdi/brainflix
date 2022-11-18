@@ -7,6 +7,7 @@
 .video {
   &__info {
     padding: 0 1rem;
+
     /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
     @include bp.medium {
       padding: 0 3rem;
@@ -15,6 +16,7 @@
     @include bp.large {
       padding: 0 0 0 5rem;
       min-width: 70vw;
+      border-right: 1px solid $secondary-semi-dark;
     }
 
     &-description {
@@ -27,6 +29,7 @@
       @include bp.large {
         @include tp.large-body-copy;
         min-height: 6.875rem;
+        margin-bottom: 0;
       }
     }
 

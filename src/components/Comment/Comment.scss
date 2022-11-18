@@ -14,17 +14,28 @@
   /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
   @include bp.large {
     padding: 0 0 0 5rem;
-    :last-child {
-      border-bottom: 0;
-    }
+    border-right: 1px solid $secondary-semi-dark;
   }
 
   &__title {
     margin-bottom: 0.9375rem;
+    @include bp.large {
+      margin-top: 0;
+    }
   }
 
   &__form {
     width: 100%;
+    @include bp.medium {
+      @include mx.flexbox;
+      align-items: center;
+      gap: 5%;
+    }
+    @include bp.large {
+      @include mx.flexbox;
+      align-items: center;
+      gap: 5%;
+    }
     &-container {
       display: flex;
       gap: 3%;
@@ -45,6 +56,15 @@
         @include mx.flexbox;
         justify-content: stretch;
         max-width: none;
+      }
+
+      &--top {
+        @include bp.medium {
+          width: 100%;
+        }
+        @include bp.large {
+          width: 100%;
+        }
       }
     }
     &-icon {
@@ -88,6 +108,7 @@
       }
     }
     &__input {
+      font-family: "Avenir";
       border-radius: 0.25rem;
       padding: 0.75rem;
       border: 1px solid $secondary-semi-dark;
@@ -108,6 +129,12 @@
 
     &-button {
       transition: 0.3s ease;
+      background-image: url("../../assets/images/add_comment.svg");
+      width: 1.3rem;
+      height: 1.3rem;
+      background-position-y: center;
+      background-position-x: 0.7rem;
+      background-repeat: no-repeat;
       &:hover {
         @include mx.buttonHover;
       }
@@ -124,13 +151,11 @@
         height: 2.7rem;
       }
       &-container {
-        position: relative;
         /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
         @include bp.large {
           margin-right: 2rem;
         }
         &-mobile {
-          position: relative;
           /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
           @include bp.medium {
             display: none;
@@ -149,34 +174,6 @@
       width: 100%;
       margin: 0.75rem 0;
       font-family: "Avenir";
-    }
-    &__button {
-      &-icon {
-        background-image: url("../../assets/images/add_comment.svg");
-        width: 1.3rem;
-        height: 1.3rem;
-        background-size: cover;
-        position: absolute;
-        top: 1.5rem;
-        left: 1.1rem;
-        &-mobile {
-          background-image: url("../../assets/images/add_comment.svg");
-          width: 1.3rem;
-          height: 1.3rem;
-          background-size: cover;
-          position: absolute;
-          top: 1.5rem;
-          left: 1.1rem;
-          /* ---------------- STYLING FOR MEDIUM DEVICES ---------------- */
-          @include bp.medium {
-            display: none;
-          }
-          /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
-          @include bp.large {
-            display: none;
-          }
-        }
-      }
     }
   }
 }

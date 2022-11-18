@@ -12,7 +12,7 @@
     display: flex;
   }
   &--left {
-    border-right: 1px solid $secondary-semi-dark;
+    // border-right: 1px solid $secondary-semi-dark;
     /* ---------------- STYLING FOR LARGE DEVICES ---------------- */
     @include bp.large {
       width: 70vw;

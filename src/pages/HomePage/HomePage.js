@@ -72,7 +72,11 @@ const HomePage = () => {
             mainVideo={mainVideo}
             clickedVideoFunction={clickedVideoFunction}
           />
-          <Comment videoDetails={videoDetails} />
+          <Comment
+            videoDetails={videoDetails}
+            setVideoDetails={setVideoDetails}
+            BACKEND_URL={BACKEND_URL}
+          />
         </section>
         <section className="main--right">
           <SuggestedVideoBox videos={videos} videoDetails={videoDetails} />
