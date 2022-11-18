@@ -7,13 +7,23 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+/* ---------------- REACT UPLOADER PACKAGE IMPORTS ---------------- */
+import { Uploader } from "uploader";
+import { UploadButton } from "react-uploader";
+
+const uploader = Uploader({
+  apiKey: "free",
+});
+const options = { multi: true };
 
 const UploadPage = () => {
+  // Navigating to the home page after 2.5 seconds of video uploading
   const navigate = useNavigate();
   const submitHandler = (e) => {
+    // preventing default on the form
     e.preventDefault();
-    console.log(e.target.value);
 
+    // if the input forms are empty, give a warning
     if (!e.target.videoTitle.value || !e.target.videoDescription.value) {
       alert("Please complete the fields before proceeding...");
     } else {
@@ -111,7 +121,23 @@ const UploadPage = () => {
             <div className="video__button-wrapper">
               {/* Linking to the upload success page */}
 
-              <button className="video__publish-button">PUBLISH</button>
+              <UploadButton
+                uploader={uploader} // Required.
+                options={options} // Optional.
+                onComplete={(files) => {
+                  // Optional.
+                  if (files.length === 0) {
+                    console.log("No files selected.");
+                  } else {
+                    console.log("Files uploaded:");
+                    console.log(files.map((f) => f.fileUrl));
+                  }
+                }}
+              >
+                {({ onClick }) => (
+                  <button onClick={onClick} className="video__publish-button">PUBLISH</button>
+                )}
+              </UploadButton>
 
               {/* Linking to the home page */}
               <Link to={"/"}>
