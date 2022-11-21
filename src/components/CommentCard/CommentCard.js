@@ -4,7 +4,7 @@ import "./CommentCard.scss";
 import { randomAvatar } from "../../utils/utils";
 import { dynamicDate } from "../../utils/utils";
 
-const CommentCard = ({ comment, name, date }) => {
+const CommentCard = ({ comment, name, date, videoDetails }) => {
   return (
     <div className="user__card">
       <div
@@ -22,6 +22,7 @@ const CommentCard = ({ comment, name, date }) => {
         </div>
         <div className="user-comment__container">
           <p className="user__comment">{comment}</p>
+          <div className="user__comment__delete-icon"></div>
         </div>
       </div>
     </div>

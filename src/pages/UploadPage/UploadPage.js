@@ -1,20 +1,11 @@
 /* ---------------- SCSS IMPORTS ---------------- */
 import "./UploadPage.scss";
-/* ---------------- ASSET IMPORTS ---------------- */
-import thumbnail from "../../assets/images/Upload-video-preview.jpg";
+
 /* ---------------- REACT IMPORTS ---------------- */
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
-/* ---------------- REACT UPLOADER PACKAGE IMPORTS ---------------- */
-import { Uploader } from "uploader";
-import { UploadButton } from "react-uploader";
-
-const uploader = Uploader({
-  apiKey: "free",
-});
-const options = { multi: true };
 
 const UploadPage = () => {
   // Navigating to the home page after 2.5 seconds of video uploading
@@ -31,11 +22,10 @@ const UploadPage = () => {
         id: uuidv4(),
         title: e.target.videoTitle.value,
         channel: "Brainflix",
-        image: "http://localhost:8080/images/Upload-video-preview.jpg",
+        image: `${process.env.REACT_APP_BACKEND_URL}/images/Upload-video-preview.jpg`,
         description: e.target.videoDescription.value,
         views: "2,013,044",
         likes: "151,475",
-        duration: "1:01",
         video: "https://project-2-api.herokuapp.com/stream",
         timestamp: Date.now(),
         comments: [
@@ -65,8 +55,9 @@ const UploadPage = () => {
           },
         ],
       };
+      // Uploading a new video then navigating to the upload success page and navigating back home after 2.5 seconds
       axios
-        .post("http://localhost:8080/videos/post", newVideo)
+        .post(`${process.env.REACT_APP_BACKEND_URL}/videos/post`, newVideo)
         .then(() => {
           navigate("/uploadSuccess");
         })
@@ -80,6 +71,7 @@ const UploadPage = () => {
         });
     }
   };
+
   return (
     <>
       <section className="upload-page">
@@ -88,7 +80,7 @@ const UploadPage = () => {
           <div className="video-container">
             <p className="video-container__title">VIDEO THUMBNAIL</p>
             <img
-              src={thumbnail}
+              src={`${process.env.REACT_APP_BACKEND_URL}/images/Upload-video-preview.jpg`}
               alt="thumbnail"
               className="video-container__image"
             ></img>
@@ -119,25 +111,7 @@ const UploadPage = () => {
               ></textarea>
             </div>
             <div className="video__button-wrapper">
-              {/* Linking to the upload success page */}
-
-              <UploadButton
-                uploader={uploader} // Required.
-                options={options} // Optional.
-                onComplete={(files) => {
-                  // Optional.
-                  if (files.length === 0) {
-                    console.log("No files selected.");
-                  } else {
-                    console.log("Files uploaded:");
-                    console.log(files.map((f) => f.fileUrl));
-                  }
-                }}
-              >
-                {({ onClick }) => (
-                  <button onClick={onClick} className="video__publish-button">PUBLISH</button>
-                )}
-              </UploadButton>
+              <button className="video__publish-button">PUBLISH</button>
 
               {/* Linking to the home page */}
               <Link to={"/"}>

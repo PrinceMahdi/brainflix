@@ -13,15 +13,17 @@ const Comment = ({ videoDetails, setVideoDetails, BACKEND_URL }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("ftest");
+    // If there is no comment, give an error
     if (!e.target.userComment.value) {
       alert("Please type something before proceeding...");
     } else {
+      // Create a new comment object
       let newComment = {
         comment: e.target.userComment.value,
         likes: 0,
         timestamp: Date.now(),
       };
+      // post to axios and change the video details state
       axios
         .post(`${BACKEND_URL}/videos/${videoDetails.id}/comments`, newComment)
         .then((response) => {
@@ -66,6 +68,7 @@ const Comment = ({ videoDetails, setVideoDetails, BACKEND_URL }) => {
           name={data.name}
           date={data.timestamp}
           key={data.id}
+          videoDetails={videoDetails}
         />
       ))}
     </div>

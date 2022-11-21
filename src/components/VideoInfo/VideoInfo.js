@@ -6,7 +6,12 @@ import "./VideoInfo.scss";
 // <------------- FUNCTION IMPORTS ------------->
 import { dynamicDate } from "../../utils/utils";
 
-const VideoInfo = ({ videoDetails, clickedVideoFunction, mainVideo }) => {
+const VideoInfo = ({
+  videoDetails,
+  clickedVideoFunction,
+  mainVideo,
+  BACKEND_URL,
+}) => {
   // params => ID of videos
   const params = useParams();
   // If there is an ID, set it to videoId, if not, set the ID to the first video
