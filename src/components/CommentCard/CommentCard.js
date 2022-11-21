@@ -22,7 +22,6 @@ const CommentCard = ({ comment, name, date, videoDetails }) => {
         </div>
         <div className="user-comment__container">
           <p className="user__comment">{comment}</p>
-          <div className="user__comment__delete-icon"></div>
         </div>
       </div>
     </div>
