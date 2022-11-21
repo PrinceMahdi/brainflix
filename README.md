@@ -2,10 +2,6 @@
 
 BrainFlix is a project written in React.js and Scss.
 
-## Site Link
-
-https://magnificent-phoenix-2d2f62.netlify.app/
-
 ## Deployment
 
 To run this project, do
@@ -18,20 +14,55 @@ To make sure you have the `node_modules` folder installed locally.
 
 <br>
 
-# BrainFlix Sprint-two
+# All feedback from sprint-one & two have been implemented:
+
+- Changed Upload button font family
+- Changed Comment button font family
+- Primary color changed to #323232
+- Fixed header logo dimensions
+- Fixed spacing between elements in the header
+- Added alt attributes to all img tags
+- Added hover styling for the Publish button
+- Added background-color to all input fields
+- Fixed BEM naming
+
+<br>
+
+# BrainFlix Sprint-three
+
 ## What went well?
-- The SCSS section went smoothly as I now have a very good grasp of various CSS properties that can accomplish tasks very well. 
+
+- This project was really fun to make. I enjoyed the progression in the difficulty and sprint-three definitely challenged me. By the end I finally got a good grasp of how to integrate back-end with front-end.
+
+## What went wrong?
+
+- Many of the diving deeper tasks were definitely challenging to implement. I spent a long time trying to figure out how to make everything work.
+
+## What could be improved?
+
+- I definitely need a lot more practice with back-end development. I need to spend time mastering the CRUD operations.
+
+<br>
+
+# BrainFlix Sprint-two
+
+## What went well?
+
+- The SCSS section went smoothly as I now have a very good grasp of various CSS properties that can accomplish tasks very well.
 - Making Axios calls to the API was nice as well, especially with the new Async Await syntax
 
 ## What went wrong?
+
 - I had an issue with an uncaught promise while pressing on the header logo but I fixed that with a ternary operator
 
 ## What could be improved?
+
 - I used an extra axios call to handle the clicking of the videos, I'm sure that could be handled better.
 
 <br>
 
 # BrainFlix Sprint-one
+
 ## Diving Deeper Section
 
 - I have implemented the Dynamic Date timestamp on the comments and the published date of the video.

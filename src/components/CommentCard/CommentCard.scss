@@ -14,8 +14,23 @@
     @include bp.large {
       max-width: 100%;
       gap: 3%;
+      // setting the border bottom of the last video to 0
       &:last-child {
         border-bottom: 0;
+      }
+    }
+  }
+
+  &__like {
+    &-button {
+      width: 1.0625rem;
+      height: 0.9375rem;
+      background-image: url("../../assets/images/likes.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+      /* ---------------- STYLING FOR ACTIVE STATE ---------------- */
+      &:active {
+        transform: scale(1.1);
       }
     }
   }
@@ -77,6 +92,23 @@
     /* ---------------- STYLING FOR SMALL DEVICES ---------------- */
     @include bp.small {
       max-width: 100%;
+    }
+
+    &__delete {
+      &-icon {
+        width: 1.0625rem;
+        height: 0.9375rem;
+        background-image: url("../../assets/images/icons8-trash-can-30.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0;
+
+        cursor: pointer;
+        @include bp.large {
+          margin-right: 1rem;
+        }
+      }
     }
   }
   &-comment {

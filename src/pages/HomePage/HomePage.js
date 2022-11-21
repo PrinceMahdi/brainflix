@@ -71,6 +71,7 @@ const HomePage = () => {
             videoDetails={videoDetails}
             mainVideo={mainVideo}
             clickedVideoFunction={clickedVideoFunction}
+            BACKEND_URL={BACKEND_URL}
           />
           <Comment
             videoDetails={videoDetails}
